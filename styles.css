@@ -1,0 +1,199 @@
+/* Basic Styles */
+main,
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.upper-container {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+
+  background-color: black;
+}
+
+.titles-container {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.logo {
+  font-size: 5rem;
+  color: white;
+}
+
+.title {
+  font-size: 2rem;
+  width: 100vw;
+  color: #aeaeae;
+  margin-top: 5px;
+  font-family: monospace;
+  position: relative;
+  /* text-align: left; */
+}
+
+.mid-container {
+  /* height: 100vh; */
+  background: linear-gradient(to bottom, black 50%, white 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to bottom, white 50%, black 50%); */
+  background-color: #f1f1f1;
+}
+
+.text-box {
+  width: 50vw;
+  margin: 10px;
+  padding: 2rem;
+  background: white;
+  border: 1rem;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Grid container */
+.grid-container {
+  background: linear-gradient(to bottom, black 50%, white 50%);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.grid-item {
+  position: relative;
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.overlay span {
+  position: relative;
+  font-size: 5em;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0.01em 0; /* Add padding to make rows close but not touching */
+  animation-duration: 5s; /* Set a fixed animation duration */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.overlay span.left {
+  color: rgb(240, 240, 240);
+  animation-name: moveLeftToRight;
+}
+
+.overlay span.right {
+  color: rgb(204, 204, 204);
+  font-style: italic;
+  animation-name: moveRightToLeft;
+}
+
+/* Animations */
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+/* Show the overlay on hover */
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.lower-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.presentation {
+  width: 60%;
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(69, 69, 69);
+  user-select: none;
+}
+
+.lower-banner {
+  width: 100%;
+  height: 1px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .logo {
+    font-size: 4.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .lower-container {
+    margin: 20px;
+  }
+  .presentation {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="lines.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">bOMo</div>
+      <nav>
+        <ul>
+          <li><a href="../../home.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="label">
+          <div class="artworkTitle">The Dynamic Tree of Life</div>
+          <p>
+            This interactive artwork represents the ever-changing journey of
+            life. The branching structure of the tree symbolizes the various
+            stages and decisions we make throughout our lives. By using Perlin
+            noise to create a more organic look, the artwork aims to convey the
+            complex and unpredictable nature of life's experiences.
+          </p>
+          <p>
+            Users are invited to engage with the piece by <u>moving their mouse</u>
+            horizontally across the screen. The branching angle of the tree
+            changes in response to the mouse position, illustrating how external
+            influences can shape our lives. This interaction allows viewers to
+            reflect on the interconnectedness of our choices and experiences,
+            and the fluidity of life's journey.
+          </p>
+          <!-- Buttons -->
+          <div class="buttons-nav">
+            <a href="linesAI1.html">
+              <div class="aibutton">Previous</div>
+            </a>
+          </div>
+        </div>
+        <div id="cnvs"></div>
+      </div>
+    </main>
+    <script src="linesAI2.js"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          window.location.href = "linesAI1.html";
+        }
+      });
+    </script>
+  </body>
+</html>

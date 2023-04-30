@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="pointed_portrait.css" />
+    <!-- <link rel="stylesheet" href="sketch_body_changes.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">bOMo</div>
+      <nav>
+        <ul>
+          <li><a href="../../home.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="label">
+          <span class="artworkTitle">Kaleidoscope of Identities</span>
+          <p>
+            This composition explores the complex nature of identity through the
+            interaction of four distinct, yet interconnected, generative art
+            pieces. 'Fragmented Echoes', 'Connecting Threads', 'Whispers of
+            Identity', and 'Shifting Perspectives'together provides a unique
+            perspective on the fluidity and multifaceted nature of our
+            self-perceptions.
+          </p>
+          <p>
+            Together, these four artworks create a harmonious composition that
+            delves into the intricate and ever-evolving nature of identity,
+            highlighting the shared experiences and connections between
+            individuals.
+          </p>
+
+          <!-- Buttons -->
+          <div class="buttons-nav">
+            <a href="pointed_portraitAI1.html">
+              <div class="aibutton">Previous</div>
+            </a>
+          </div>
+        </div>
+        <div class="portrait-group">
+          <div
+            id="cnvs1"
+            class="portrait-item"
+            onclick="openModal('txt-cnvs1')"
+          ></div>
+          <div
+            id="cnvs2"
+            class="portrait-item"
+            onclick="openModal('txt-cnvs2')"
+          ></div>
+          <div
+            id="cnvs3"
+            class="portrait-item"
+            onclick="openModal('txt-cnvs3')"
+          ></div>
+          <div
+            id="cnvs4"
+            class="portrait-item"
+            onclick="openModal('txt-cnvs4')"
+          ></div>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close-button" onclick="closeModal()">&times;</span>
+              <div id="modal-text"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="pointed_portraitAI2.js"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          window.location.href = "pointed_portraitAI1.html";
+        }
+      });
+    </script>
+  </body>
+</html>

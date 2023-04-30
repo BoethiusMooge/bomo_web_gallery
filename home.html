@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="upper-container">
+        <div class="titles-container">
+          <div class="logo">bOMo</div>
+          <div id="typing-text" class="title typing-animation"></div>
+          <script>
+            const text = "The Black&White Collection: Conversations in Code";
+            const typingTextElement = document.getElementById("typing-text");
+            let currentIndex = 0;
+
+            function typeText() {
+              if (currentIndex < text.length) {
+                typingTextElement.textContent += text.charAt(currentIndex);
+                currentIndex++;
+                setTimeout(typeText, 100); // Adjust the typing speed here
+              } else {
+                // After typing the complete text, wait for 3 seconds before restarting the animation
+                setTimeout(() => {
+                  typingTextElement.textContent = "";
+                  currentIndex = 0;
+                  typeText();
+                }, 8000);
+              }
+            }
+
+            typeText();
+          </script>
+        </div>
+      </div>
+      <div class="mid-container">
+        <div class="grid-container">
+          <div class="grid-item">
+            <a href="sketches\lines\lines.html">
+              <img src="../assets/lines.gif" alt="lines_preview" />
+              <div class="overlay">
+                <span class="right">./lines</span>
+                <span class="left">./lines</span>
+                <span class="right">./lines</span>
+                <span class="left">./lines</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="sketches/flow_pair/flow_pair.html">
+              <img
+                src="../assets/flow_pair.gif"
+                alt="flow_pair_preview"
+              />
+              <div class="overlay">
+                <span class="right">./flow_pair</span>
+                <span class="left">./flow_pair</span>
+                <span class="right">./flow_pair</span>
+                <span class="left">./flow_pair</span>
+              </div>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="sketches\pointed_portrait\pointed_portrait.html">
+              <img
+                src="../assets/pointed_portrait.gif"
+                alt="pointed_portrait_preview"
+              />
+              <div class="overlay">
+                <span class="right">./pointed_portrait</span>
+                <span class="left">./pointed_portrait</span>
+                <span class="right">./pointed_portrait</span>
+                <span class="left">./pointed_portrait</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="lower-container">
+        <div class="presentation">
+          Explore the fascinating intersection of art and technology,
+          transcending traditional boundaries and blurring the lines between
+          human and machine creativity. <br /><br />
+
+          In this one-of-a-kind digital gallery, you'll find each artwork by
+          bOMo accompanied by an AI-generated text that delves into the piece's
+          meaning. The AI's understanding of the code behind bOMo's creations
+          allows it to offer a fresh perspective, adding depth to the artist's
+          vision. Then the AI expands the collection presenting its own
+          reinterpretations of bOMo's artworks, completed with explanations that
+          reveal its creative thought process.
+        </div>
+      </div>
+      <div class="lower-banner"></div>
+    </main>
+  </body>
+</html>

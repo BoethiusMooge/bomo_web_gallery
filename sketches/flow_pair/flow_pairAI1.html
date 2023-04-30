@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="flow_pair.css" />
+    <!-- <link rel="stylesheet" href="sketch_body_changes.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">bOMo</div>
+      <nav>
+        <ul>
+          <li><a href="../../home.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="label">
+          <span class="artworkTitle">Binary Symphony</span>
+          <div class="scrollable-div">
+          <p>
+            Explore the intricate interplay between chaos and order through the
+            harmonious arrangement of black and white elements. The artwork uses
+            an ever-changing pattern of circles, carefully crafted to showcase
+            the delicate balance between contrasting forces, with each circle
+            representing a fragment of the broader narrative.
+            <br><br>
+            Drawing inspiration from the binary nature of black and white, the
+            piece invites the viewer to reflect upon the duality present in our
+            lives, where opposing forces coexist, shaping our experiences and
+            perceptions. The circles, varying in size and position, create a
+            visually captivating dance of unity and contrast, evoking the sense
+            of a symphony in which each note contributes to the overall harmony.
+            <br><br>
+            As the circles oscillate between order and chaos, the artwork
+            illustrates the fluidity and impermanence of life. The constantly
+            evolving patterns serve as a metaphor for the ebbs and flows of our
+            existence, reminding us that harmony can often be found in the most
+            unexpected places.
+            <br><br>
+            In "Binary Symphony," each viewer's experience is unique, as the
+            generative nature of the piece ensures that no two moments are
+            identical.
+          </p>
+          </div>
+          <!-- Buttons -->
+          <div class="buttons-nav">
+            <a href="flow_pair.html">
+              <div class="aibutton">Previous</div>
+            </a>
+            <a href="flow_pairAI2.html">
+              <div class="aibutton">Next</div>
+            </a>
+          </div>
+        </div>
+        <div id="cnvs"></div>
+      </div>
+    </main>
+    <script src="flow_pairAI1.js"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          window.location.href = "flow_pair.html";
+        } else if (event.key === "ArrowRight") {
+          window.location.href = "flow_pairAI2.html";
+        }
+      });
+    </script>
+  </body>
+</html>

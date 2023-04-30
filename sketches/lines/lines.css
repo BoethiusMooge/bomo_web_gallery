@@ -1,0 +1,102 @@
+/* default view */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: calc(100% - 56.67px);
+}
+
+.container {
+  height: calc(100% - 100px);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  color: rgb(198, 198, 198);
+  background-color: black;
+  padding: 40px;
+  margin-right: 40px;
+  max-width: 800px;
+
+  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  user-select: none;
+  overflow: auto;
+}
+
+.artworkTitle {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.buttons-nav {
+  display: flex;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.aibutton {
+  width: fit-content;
+  min-width: 123.38px;
+  padding: 15px;
+  border: none;
+
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  background-color: #696969;
+}
+
+.aibutton:hover {
+  color: black;
+  background-color: #f1f1f1;
+}
+
+/* view breakpoint IPAD */
+/* @media screen and (max-width: 1000px) {
+  .label {
+    font-size: 1.3rem;
+    order: 2;
+  }
+} */
+
+/* view breakpoint IPHONE */
+@media screen and (max-width: 500px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .label {
+    font-size: 1rem;
+    order: 2;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .artworkTitle {
+    font-size: 2rem;
+  }
+
+  .aibutton {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  #cnvs {
+    order: 1;
+  }
+}

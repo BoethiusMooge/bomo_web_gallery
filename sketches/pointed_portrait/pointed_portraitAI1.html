@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="pointed_portrait.css" />
+    <!-- <link rel="stylesheet" href="sketch_body_changes.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">bOMo</div>
+      <nav>
+        <ul>
+          <li><a href="../../home.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="label">
+          <span class="artworkTitle">Interconnected Unity</span>
+          <p>
+            Discover the beauty of unity and interconnectedness in
+            this generative artwork that brings to life the
+            complex bonds that connect us all. With its mesmerizing pattern of
+            rotating lines, the artist illustrates the dynamic and ever-evolving
+            nature of relationships, reminding us of the intricate web of
+            connections that form the fabric of our lives. Delight in the
+            elegance of this simple yet captivating design, and be inspired by
+            the power of unity to bring harmony and balance to our world.
+          </p>
+
+          <!-- Buttons -->
+          <div class="buttons-nav">
+            <a href="pointed_portrait.html">
+              <div class="aibutton">Previous</div>
+            </a>
+            <a href="pointed_portraitAI2.html">
+              <div class="aibutton">Next</div>
+            </a>
+          </div>
+        </div>
+        <div id="cnvs"></div>
+      </div>
+    </main>
+    <script src="pointed_portraitAI1.js"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          window.location.href = "pointed_portrait.html";
+        } else if (event.key === "ArrowRight") {
+          window.location.href = "pointed_portraitAI2.html";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="flow_pair.css" />
+    <!-- <link rel="stylesheet" href="sketch_body_changes.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">bOMo</div>
+      <nav>
+        <ul>
+          <li><a href="../../home.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="label" style="max-width: 800px;">
+          <span class="artworkTitle">Celestial Symmetry: Order in Flux</span>
+          <div>
+            <p>
+              Interactive generative artwork that explores the delicate balance
+              between order and chaos, expressed through the mesmerizing motion
+              of rotating hexagons. The piece creates a captivating visual
+              experience that represents the beauty and order found within
+              complex systems.
+            </p>
+            <p>
+              The user can interact with the artwork by <u>scrolling the mouse wheel</u>
+              to control the rotation speed of the hexagons, giving them
+              the ability to contemplate the harmony present in seemingly
+              chaotic systems. This interaction symbolizes the potential for
+              change and adaptability in both natural systems and human
+              experiences, reminding the viewer of the importance of resilience
+              in the face of uncertainty.
+            </p>
+          </div>
+          <!-- Buttons -->
+          <div class="buttons-nav">
+            <a href="flow_pairAI1.html">
+              <div class="aibutton">Previous</div>
+            </a>
+          </div>
+        </div>
+        <div id="cnvs"></div>
+      </div>
+    </main>
+    <script src="flow_pairAI2.js"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          window.location.href = "flow_pairAI1.html";
+        }
+      });
+    </script>
+  </body>
+</html>

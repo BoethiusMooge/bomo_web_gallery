@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoMo Gallery</title>
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="lines.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">bOMo</div>
+      <nav>
+        <ul>
+          <li><a href="../../home.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="label">
+          <div class="artworkTitle">The Ephemeral Dance of Life</div>
+          <p>
+            This black and white abstract artwork features a series of
+            interconnected circles that form a mesmerizing, ever-changing
+            pattern. The circles represent different stages and experiences in
+            life, while their varying sizes and positions reflect the fluidity
+            and interconnectedness of these stages.
+          </p>
+          <p>
+            The artwork uses a dynamic algorithm that creates a harmonious
+            motion, simulating the constant change we experience throughout our
+            lives. As the circles ebb and flow, they create a dance-like pattern
+            that represents the harmony and rhythm found within the chaos of
+            life's journey.
+          </p>
+          <p>
+            By observing the fluid transformation of the pattern, viewers can
+            reflect on the beauty of life's unpredictability and the rich
+            tapestry of experiences that weave together to create our unique
+            personal stories.
+          </p>
+          <!-- Buttons -->
+          <div class="buttons-nav">
+            <a href="lines.html">
+              <div class="aibutton">Previous</div>
+            </a>
+            <a href="linesAI2.html">
+              <div class="aibutton">Next</div>
+            </a>
+          </div>
+        </div>
+        <div id="cnvs"></div>
+      </div>
+    </main>
+    <script src="linesAI1.js"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          window.location.href = "lines.html";
+        } else if (event.key === "ArrowRight") {
+          window.location.href = "linesAI2.html";
+        }
+      });
+    </script>
+  </body>
+</html>

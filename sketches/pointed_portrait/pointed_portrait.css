@@ -1,0 +1,171 @@
+/* default view */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  height: calc(100% - 56.67px);
+}
+
+.container {
+  height: calc(100% - 100px);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  order: 2;
+
+  color: rgb(198, 198, 198);
+  background-color: black;
+  padding: 40px;
+  margin-left: 40px;
+  max-width: 800px;
+
+  font-size: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  user-select: none;
+  overflow: auto;
+}
+
+#cnvs {
+  order: 1;
+}
+
+.portrait-group {
+  order: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.portrait-item {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.portrait-item:hover {
+  transform: scale(1.05);
+}
+
+.artworkTitle {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.buttons-nav {
+  display: flex;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.aibutton {
+  width: fit-content;
+  min-width: 123.38px;
+  padding: 15px;
+  border: none;
+
+  font-size: x-large;
+  color: white;
+  text-align: center;
+  background-color: #696969;
+}
+
+.aibutton:hover {
+  color: black;
+  background-color: #f1f1f1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 25px;
+  /* border: 5px solid black; */
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+
+  color: #252525;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* view breakpoint IPAD */
+/* @media screen and (max-width: 1000px) {
+  .label {
+    font-size: 1.3rem;
+    order: 2;
+  }
+} */
+
+/* view breakpoint IPHONE */
+@media screen and (max-width: 500px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .label {
+    font-size: 1rem;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .artworkTitle {
+    font-size: 2rem;
+  }
+
+  .aibutton {
+    font-size: 1.2rem;
+  }
+
+  .portrait-group {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    font-size: 1rem;
+  }
+}
